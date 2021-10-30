@@ -1,0 +1,227 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica";
+}
+
+@font-face{
+    font-family: 'Helvetica', sans-serif;
+    src: url(Fuentes/Helvetica.ttf);
+}
+
+.cuadricula{
+    display: grid;
+    grid-template-areas: "header header"
+                         "area areados"
+                         "footer footer";
+    grid-auto-rows: 3.1fr 4fr 0.85fr;
+    grid-auto-columns: 1.5fr 1.5fr;
+    grid-gap: 15px;
+    height: 100vh;
+    width: 100%;
+}
+body{
+    background-color: #828282;
+}
+
+/*Header*/
+    .contenedorHeader{
+        grid-area: header;
+        margin: 0 2rem;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 12rem 3rem;
+        list-style: none;
+    }
+
+    .familia{
+        display: grid;
+        grid-auto-flow: column;
+        border-bottom: solid rgb(0, 2, 9) 2px;
+    }
+
+    .arriba{
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-rows: 3rem 9rem;
+        margin-bottom: 10px;
+    }
+
+    .arriba nav{
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-around;
+        align-content: center;
+        
+    }
+
+    .arriba nav li a{
+        text-decoration: none;
+        color: rgb(0, 2, 9);
+    }
+    .arriba h1{
+        display: grid;
+        align-content: flex-end;
+        margin-top: 27%;
+    }
+
+    .logo{
+        display: grid;
+        justify-content: end;
+        align-content: center;
+    }
+
+    .logo a{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        height: 12rem;
+        width: 12rem;
+    }
+    .logo a img{
+        display: grid;
+        justify-content: end;
+        align-self: center;
+        width: 80%;
+    }
+    .items{
+        display: grid;
+        grid-auto-flow: column;
+        margin: 10px 0px;
+    }
+
+    .items li a{
+        text-decoration: none;
+        color: rgb(0, 2, 9);
+        font-size: 25px;
+
+    }
+.productoInfo{
+    grid-area: area;
+    display: grid;
+    margin-left: 2rem;
+}
+.productoInfo p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.informacion{
+    grid-area: areados;
+}
+
+.menu img{
+    width: 330px;
+    height: auto;
+    text-align: right;
+}
+    .boceto{
+        height: 26rem;
+    }
+    .maqueta{
+        display: grid;
+    }
+    .maqueta img{
+        margin: 30px 30px;
+        width: 250px;
+        height: auto;
+        text-align: right;
+    }
+    .especificaciones{
+        padding: 0.5rem;
+        width: 50%;
+        float: left;
+        margin-top: 15rem;
+    }
+
+    .contenedorColores{
+        align-items: center;
+        width: 40%;
+        float: left;
+        margin-left: 3rem;
+    }
+    .contenedorColores li{
+        list-style: none;
+    }
+    .contenedorColores li .gris{
+        width: 1rem;
+        height: 1rem;
+        background-color: gray;
+    }
+    .contenedorColores li .amarillo{
+        width: 1rem;
+        height: 1rem;
+        background-color: yellow;
+    }
+    .contenedorColores li .blanco{
+        width: 1rem;
+        height: 1rem;
+        background-color: #FFFFFF;
+    }
+
+.gris p{
+    margin-left: 1.5rem;
+}
+.amarillo p{
+    margin-top: 0.1rem;
+    margin-left: 1.5rem;
+}
+.blanco p{
+    margin-top: 0.1rem;
+    margin-left: 1.5rem;
+}
+
+
+.contenedorFooter{
+    grid-area: footer;
+    height: 100%;
+    width: 100%;
+    align-content: center;
+    display: grid;
+    grid-auto-flow: column;
+    color: rgb(230, 230, 230);
+    font-size: 1rem;
+    background-color: rgb(0, 2, 9);
+}
+
+
+.izquierda {
+    height: 4.5rem;
+    display: grid;
+    align-content: space-around;
+    justify-content: flex-start;
+    list-style: none;
+    font-size: 1.1rem;
+    margin-left: 10px;
+}
+
+.derecha {
+    margin: 10px;
+    display: grid; 
+    grid-auto-flow: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    list-style: none;
+}
+
+.derecha img{
+    margin-right: 10px;
+}
+
+.derecha li{
+    align-content: flex-end;
+    font-size: 1.7rem;
+}
+
+.contenedorFooter li a{
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+}
+.derecha li img{
+    height: 1.7rem;
+}
+
+.contenedorHeader nav li a:hover{
+    transition: all 0.5s;
+    color: rgb(255, 255, 255);
+}
